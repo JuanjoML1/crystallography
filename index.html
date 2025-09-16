@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+        <meta charset="UTF-8">
+        <title>Visualizador de celdillas</title>
+        <style>
+                body {
+                        margin: 0;
+                        display: flex;
+                        height: 100vh;
+                        font-family: sans-serif;
+                }
+
+                #controls {
+                        width: 200px;
+                        /* ancho de la barra de controles */
+                        padding: 10px;
+                        background-color: #f0f0f0;
+                        box-sizing: border-box;
+                }
+
+                #viewer {
+                        flex-grow: 1;
+                        /* ocupa el resto de la pantalla */
+                        background-color: #ffffff;
+                }
+
+                label {
+                        display: block;
+                        margin-top: 10px;
+                }
+        </style>
+</head>
+
+<body>
+        <div id="controls">
+                <label>
+                        Sistema cristalográfico:<br>
+                        <select id="cellSelect">
+                                <option value="1">Primitiva</option>
+                                <option value="2">Convencional</option>
+                        </select>
+                </label>
+
+                <label>
+                        Tipo de celdilla:<br>
+                        <select id="typeSelect">
+                                <option value="1">Simple</option>
+                                <option value="2">Ternaria</option>
+                        </select>
+                </label>
+                <label>
+                        Escala de átomos:<br>
+                        <select id="radiusScale">
+                                <option value="1">Real</option>
+                                <option value="0.5">Pequeño</option>
+                                <option value="0.2">Muy pequeño</option>
+                        </select>
+                </label>
+        </div>
+
+        <div id="viewer"></div>
+
+        <!-- Three.js r146 y OrbitControls clásico -->
+        <script src="https://cdn.jsdelivr.net/gh/mrdoob/three.js@r146/build/three.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/mrdoob/three.js@r146/examples/js/controls/OrbitControls.js"></script>
+
+        <script src="./js/celdilla.js"></script>
+</body>
+
+</html>

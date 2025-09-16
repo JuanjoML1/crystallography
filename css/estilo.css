@@ -1,0 +1,193 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+#buscador-container {
+    display: flex;
+    align-items: center;
+    /* centra verticalmente */
+    gap: 0;
+    /* sin espacio entre elementos */
+    margin-bottom: 1em;
+}
+
+#filtro,
+#buscador {
+    height: 2.2em;
+    box-sizing: border-box;
+    font-size: 1em;
+    border: 1px solid #ccc;
+}
+
+/* Select ancho fijo, sin margen */
+#filtro {
+    flex: 0 0 100px;
+    border-right: 0;
+    /* quita borde derecho para “unir” con input */
+    padding: 0 0.3em;
+    border-radius: 4px 0 0 4px;
+    /* Redondea el select solo por la izquierda */
+}
+
+/* Input ocupa el resto, sin margen */
+#buscador {
+    flex: 1;
+    padding: 0 0.5em;
+    border-left: 0;
+    /* quita borde izquierdo para “unir” con select */
+    border-radius: 0 4px 4px 0;
+    /* redondea solo la derecha */
+}
+
+.lista {
+    list-style: none;
+    /* elimina los bullets */
+    padding: 0;
+    /* quita padding por defecto del <ul> */
+    margin: 0;
+    /* quita margen por defecto del <ul> */
+}
+
+.lista a {
+    display: block;
+    /* Hace que cada enlace ocupe toda la línea, clic fácil en móvil */
+    padding: 0.2em 1em;
+    /* Espacio interno: 0.2em arriba/abajo, 1em izquierda/derecha */
+    margin: 0.2em 0;
+    /* Separación entre enlaces: 0.2em arriba y abajo */
+    background-color: #f0f0f0;
+    /* Color de fondo gris claro */
+    text-decoration: none;
+    /* Quita el subrayado del enlace */
+    color: #000000;
+    /* Color del texto gris oscuro */
+    border-radius: 4px;
+    /* Esquinas ligeramente redondeadas */
+    transition: background 0.2s;
+    /* Transición suave de 0.2s al cambiar el fondo (hover) */
+}
+
+.lista a:hover {
+    background-color: #dce4f0;
+    /* Cambia el fondo al pasar el cursor */
+}
+
+hr {
+    border: none;
+    border-top: 2px solid #ccc;
+    /* línea horizontal para separar */
+    margin: 10px 0;
+    /* espacio arriba y abajo */
+    border-top: 2px solid #ccc;
+    /* línea horizontal para separar */
+    margin: 10px 0;
+    /* espacio arriba y abajo */
+}
+
+pre {
+    font-size: 1.2em;
+    /* un poquito más grande que el tamaño base */
+    line-height: 1.2;
+    /* interlineado*/
+}
+
+pre .estribillo {
+    font-weight: bold;
+    color: rgb(0, 2, 142);
+}
+
+pre .gr {
+    color: rgb(163, 0, 0);
+    text-decoration: underline;
+    text-decoration-style: double;
+}
+
+pre .ag {
+    color: rgb(106, 99, 0);
+    text-decoration: overline;
+}
+
+pre.original {
+    /*Los pre que son original. Con punto es "los original que estén dentro de un pre"*/
+    font-style: italic;
+    color: #000000;
+}
+
+.vocabulario div {
+    display: flex;
+    justify-content: space-between;
+    /* palabra izquierda, traducción derecha */
+    border-bottom: 1px dotted #888;
+    /* separador suave */
+    padding: 0.2em 0;
+}
+
+.vocabulario span:first-child {
+    font-weight: bold;
+    /* alemán en negrita */
+}
+/*.vocabulario span:last-child {
+  color: #555;         /* traducción más suave 
+}*/
+
+.s_m { color: #1e90ff; }                      /* Maskulin Susbtantiv; azul */
+.s_f { color: #e91e63; }                      /* Feminin Susbtantiv; rosa */
+.s_n { color: #9c27b0; }                      /* Neutrum Susbtantiv; morado */
+.ver { color: #2e7d32; }                      /* Verb; verde */
+.adj { color: #ff9800; }                      /* Adjetiv; naranja */
+.adv { color: #795548; }                      /* Adverb; marrón */
+.pre { color: #009688; }                      /* Präposition; turquesa */
+.kon { color: #607d8b; }                      /* Konjunktion; gris azulado */
+.par { color: #000; font-style: italic; }     /* Partikel; negro */
+.pro { color: #8bc34a; }                      /* Pronomen; verde claro */
+.art { color: #444; font-style: italic; }     /* Artikel; gris */
+.dru { color: #646200; font-style: italic; }  /* Ausdruck; gris */
+
+.gramatica p {
+    margin: 0.5em 0;
+    font-weight: bold;
+}
+
+.gramatica ul {
+    margin: 0.2em 0 0.8em 1.5em;
+}
+
+.cancion-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    padding: 5px 0;
+}
+
+.cancion-header .numeros {
+    min-width: 80px;
+    /* ajusta según lo que ocupen los números */
+    font-size: 0.9em;
+    text-align: left;
+}
+
+span.antiguo::before {
+    content: "(";
+}
+
+span.antiguo::after {
+    content: ")";
+}
+
+.cancion-header .titulo {
+    flex: 1;
+    text-align: center;
+    margin: 0;
+    font-size: 2em;
+}
+
+.cancion-header .tono {
+    min-width: 80px;
+    text-align: right;
+    font-size: 0.9em;
+}
