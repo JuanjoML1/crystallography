@@ -1,0 +1,7 @@
+{
+  "atomTypes": {
+    "A": {"color": "#3333ee", "radius":0.2},
+    "im": {"color": "#ee3333", "radius":0.1},
+    "iM": {"color": "#33ee33", "radius":0.15}
+  }
+}

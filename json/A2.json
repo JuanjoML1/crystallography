@@ -1,0 +1,110 @@
+{
+  "cells": {
+    "A2": {
+      "Primitiva": {
+        "a": 1,
+        "b": 1,
+        "c": 1,
+        "atoms": [
+          {"element": "A", "x": 0,     "y": 0,     "z": 0    },
+          {"element": "A", "x": 0.5,   "y": 0.5,   "z": 0.5  },
+          {"element": "A", "x": -0.5,  "y": 0.5,   "z": 0.5  },
+          {"element": "A", "x": 0.5,   "y": -0.5,  "z": 0.5  },
+          {"element": "A", "x": 0.5,   "y": 0.5,   "z": -0.5 },
+          {"element": "A", "x": -0.5,  "y": -0.5,  "z": 0.5  },
+          {"element": "A", "x": -0.5,  "y": 0.5,   "z": -0.5 },
+          {"element": "A", "x": 0.5,   "y": -0.5,  "z": -0.5 },
+          {"element": "A", "x": -0.5,  "y": -0.5,  "z": -0.5 }
+        ]
+      },
+      "Intersticios menores": {
+        "a": 1,
+        "b": 1,
+        "c": 1,
+        "atoms": [
+          {"element": "im", "x": 0.5,   "y": 0,     "z": 0    },
+          {"element": "im", "x": 0,     "y": 0.5,   "z": 0    },
+          {"element": "im", "x": 0,     "y": 0,     "z": 0.5  },
+          {"element": "im", "x": -0.5,  "y": 0,     "z": 0    },
+          {"element": "im", "x": 0,     "y": -0.5,  "z": 0    },
+          {"element": "im", "x": 0,     "y": 0,     "z": -0.5 },
+
+          {"element": "im", "x": 0.5,   "y": 0.5,   "z": 0    },
+          {"element": "im", "x": 0.5,   "y": 0,     "z": 0.5  },
+          {"element": "im", "x": 0.5,   "y": -0.5,  "z": 0    },
+          {"element": "im", "x": 0.5,   "y": 0,     "z": -0.5 },
+
+          {"element": "im", "x": -0.5,  "y": 0.5,   "z": 0    },
+          {"element": "im", "x": -0.5,  "y": 0,     "z": 0.5  },
+          {"element": "im", "x": -0.5,  "y": -0.5,  "z": 0    },
+          {"element": "im", "x": -0.5,  "y": 0,     "z": -0.5 },
+
+          {"element": "im", "x": 0,     "y": 0.5,   "z": 0.5  },
+          {"element": "im", "x": 0,     "y": 0.5,   "z": -0.5 },
+          {"element": "im", "x": 0,     "y": -0.5,  "z": 0.5  },
+          {"element": "im", "x": 0,     "y": -0.5,  "z": -0.5 }
+        ]        
+      },
+            "Intersticios mayores": {
+        "a": 1,
+        "b": 1,
+        "c": 1,
+        "atoms": [
+          {"element": "iM", "x": 0.5,   "y": 0.25,  "z": 0    },
+          {"element": "iM", "x": 0.5,   "y": -0.25, "z": 0    },
+          {"element": "iM", "x": 0.5,   "y": 0,     "z": 0.25 },
+          {"element": "iM", "x": 0.5,   "y": 0,     "z": -0.25},
+          
+          {"element": "iM", "x": -0.5,  "y": 0.25,  "z": 0    },
+          {"element": "iM", "x": -0.5,  "y": -0.25, "z": 0    },
+          {"element": "iM", "x": -0.5,  "y": 0,     "z": 0.25 },
+          {"element": "iM", "x": -0.5,  "y": 0,     "z": -0.25},
+          
+          {"element": "iM", "x": 0.25,  "y": 0.5,   "z": 0    },
+          {"element": "iM", "x": -0.25, "y": 0.5,   "z": 0    },
+          {"element": "iM", "x": 0,     "y": 0.5,   "z": 0.25 },
+          {"element": "iM", "x": 0,     "y": 0.5,   "z": -0.25},
+          
+          {"element": "iM", "x": 0.25,  "y": -0.5,  "z": 0    },
+          {"element": "iM", "x": -0.25, "y": -0.5,  "z": 0    },
+          {"element": "iM", "x": 0,     "y": -0.5,  "z": 0.25 },
+          {"element": "iM", "x": 0,     "y": -0.5,  "z": -0.25},
+          
+          {"element": "iM", "x": 0.25,  "y": 0,     "z": 0.5  },
+          {"element": "iM", "x": -0.25, "y": 0,     "z": 0.5  },
+          {"element": "iM", "x": 0,     "y": 0.25,  "z": 0.5  },
+          {"element": "iM", "x": 0,     "y": -0.25, "z": 0.5  },
+          
+          {"element": "iM", "x": 0.25,  "y": 0,     "z": -0.5 },
+          {"element": "iM", "x": -0.25, "y": 0,     "z": -0.5 },
+          {"element": "iM", "x": 0,     "y": 0.25,  "z": -0.5 },
+          {"element": "iM", "x": 0,     "y": -0.25, "z": -0.5 }          
+        ]        
+      },
+            "Primitiva con iM + im": {
+              "a": 1,
+              "b": 1,
+              "c": 1,
+              "bases": ["Primitiva", "Intersticios menores", "Intersticios mayores"]
+      },
+            "Primitiva con im": {
+              "a": 1,
+              "b": 1,
+              "c": 1,
+              "bases": ["Primitiva", "Intersticios menores"]
+      },
+            "Primitiva con iM": {
+              "a": 1,
+              "b": 1,
+              "c": 1,
+              "bases": ["Primitiva", "Intersticios mayores"]
+      },
+            "Sólo intersticios": {
+              "a": 1,
+              "b": 1,
+              "c": 1,
+              "bases": ["Intersticios mayores", "Intersticios menores"]
+      }
+    }
+  }
+}
